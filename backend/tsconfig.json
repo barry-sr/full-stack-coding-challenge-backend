@@ -19,7 +19,8 @@
     "noFallthroughCasesInSwitch": false,
     "types": ["node", "jest"],
     "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true
+    "allowJs": true,
+    "resolveJsonModule": true
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules", "dist"]

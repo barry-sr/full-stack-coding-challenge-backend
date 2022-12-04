@@ -45,3 +45,7 @@ yarn start
 The app should be available via [http://localhost:3000](http://localhost:3000).
 
 Good luck and talk soon!
+
+`docker run --name postgres-db -e POSTGRES_PASSWORD=mypassword -p 5432:5432 -d postgres`
+
+`npx prisma db seed`;
