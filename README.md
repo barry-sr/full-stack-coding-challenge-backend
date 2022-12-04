@@ -52,11 +52,15 @@ Please navigate to the backend directory
 - Start a Dockerized Postgres by running the following command:
 `docker run --name postgres-db -e POSTGRES_PASSWORD=mypassword -p 5432:5432 -d postgres`
 - Resolve dependencies by running this command: `yarn install`
-- Populate the database with the data from the json file if you have not done this already; run this command:
-`npx prisma db seed`
+- To sync the database with the prisma schema and table run this command: `npx prisma migrate dev --name init`
+     > Note: This is done only once.
+- Populate the database with the data from the json file if you have not done this already; run this command: `npx prisma db seed`
+     > Note: This is done only once.
 - Now start the server by running this command: `yarn start`;
 
 The document (Swagger) should be available via [http://localhost:3001/airport](http://localhost:3001/airport).
 
 The endpoint should be also available via [http://localhost:3001/airport/{filter}](http://localhost:3001/airport/{filter})
 where the filter could be either `name`, `iata`, `city` or `country`.
+
+This is the [link](https://www.loom.com/share/12e317b5bb3d4fb98f9815b9da892f64) to the video recording.
