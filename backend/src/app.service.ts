@@ -11,16 +11,25 @@ export class AppService {
       where: {
         OR: [
           {
-            name: filter,
+            name: {
+              contains: filter,
+              mode: 'insensitive'
+            },
           },
           {
             iata: filter,
           },
           {
-            city: filter,
+            city:  {
+             contains: filter,
+             mode: 'insensitive'
+            },
           },
           {
-            country: filter,
+            country: {
+              contains: filter,
+              mode: 'insensitive'
+            },
           },
         ],
       },
